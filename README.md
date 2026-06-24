@@ -1,4 +1,4 @@
-# AGENTS (Investigador) — Resumen
+# AGENTS (Investigador)
 
 ## ¿Qué es?
 
