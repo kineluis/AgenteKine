@@ -131,3 +131,8 @@ Qué hace por ti, sin que se lo pidas paso a paso:
 Es un protocolo que convierte al agente en un par investigador riguroso: **no dice nada
 que no haya sido recuperado, verificado y valorado**, y por eso es seguro apoyarse en él
 para informar decisiones de práctica kinésica.
+
+## Como utilizar
+1.	Descargar el archivo AGENTS.md
+2.	Pegarlo en la carpeta donde ejecutaras tu sistema agentico y listo. (Esta pensado para Opencode, pero lo puedes adaptar a cualquier otro sistema agentico que guste) 
+
