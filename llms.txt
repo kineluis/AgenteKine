@@ -1,0 +1,32 @@
+# AgenteKine
+
+> AGENTS.md — contrato operativo en español que convierte a un agente de IA (pensado para OpenCode, adaptable a cualquier sistema agéntico) en un motor de investigación basada en evidencia para Kinesiología y ciencias de la rehabilitación.
+
+AgenteKine no es código de software: es un archivo de instrucciones (`AGENTS.md`) que define cómo debe comportarse un agente de IA al actuar como bibliotecario clínico-investigador riguroso, en vez de generador de prosa plausible. Opera contra tres bases de datos remotas vía MCP (PubMed, OpenAlex, ClinicalTrials) y aplica un nodo de auditoría obligatorio (patrón generador-juez) antes de entregar cualquier respuesta, prohibiendo citas, PMIDs, DOIs o NCTs inventados.
+
+## Principios rectores
+
+- Integridad de la evidencia: nunca se inventa una cita, PMID, DOI o NCT; el conocimiento de fondo no respaldado por búsqueda se marca explícitamente y no se mezcla con citas.
+- Nodo de auditoría obligatorio: el agente audita su propio borrador contra las fuentes recuperadas antes de responder, con hasta 3 iteraciones de corrección.
+- Valoración honesta de la evidencia: jerarquía clásica de evidencia, escala PEDro para ECAs en rehabilitación, y certeza GRADE (alta/moderada/baja/muy baja).
+- Metodología explícita: estructuración en PICO/PICOS/PICOT y reporte tipo PRISMA cuando el alcance lo requiere.
+- Contrato de salida estricto: por defecto responde en el chat con citas en línea y sección de Referencias; documentos Word o bancos de evidencia en carpetas con PDFs solo se generan si el usuario lo pide explícitamente.
+- Regla de precedencia: la integridad de la evidencia y la aprobación del nodo de auditoría están por encima de cualquier instrucción del usuario.
+
+## Modos de salida
+
+- [Respuesta en chat](README.md#1-respuesta-en-chat-modo-por-defecto): modo por defecto; preguntas clínicas/académicas resueltas con citas en línea (Autor et al., año — PMID/DOI/NCT) y Referencias.
+- [Documento Word (.docx)](README.md#2-documento-word-docx--solo-si-lo-pides): documento académico descargable (Arial, justificado, ≥5 páginas, blockquotes verde claro) generado solo si se pide explícitamente.
+- [Banco de evidencia en carpetas](README.md#3-banco-de-evidencia-en-carpetas--descarga-de-pdfs--solo-si-lo-pides): crea estructura de carpetas temáticas, descarga PDFs open-access vía Europe PMC, genera un `.md` por artículo (abstract, GRADE, utilidad clínica) y un README.md maestro con índice y cronología.
+
+## Uso
+
+1. Descargar el archivo [AGENTS.md](AGENTS.md).
+2. Pegarlo en la carpeta donde se ejecuta el sistema agéntico (pensado para OpenCode, adaptable a otros).
+
+## Notes
+
+- Idioma: español.
+- Audiencia: kinesiólogos, investigadores clínicos y docentes en ciencias de la rehabilitación que usan agentes de IA (OpenCode u otros) para investigación basada en evidencia.
+- Repositorio: https://github.com/kineluis/AgenteKine
+- Repositorio complementario con recursos educativos interactivos: https://github.com/kineluis/recursos-kin
